@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tChat - Realtime chat</title>
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="client.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <header class="app-header">
+    <div class="app-icon" aria-hidden="true"><span>✦</span></div>
+    <div>
+      <h1>tChat</h1>
+      <p>Realtime conversations</p>
+    </div>
+    <span class="online-dot" title="Chat server status"></span>
+  </header>
+
+  <div class="chat-window" id="chatWindow">
+    <p class="empty-state" id="emptyState">Connecting to chat…</p>
+  </div>
+
+  <p class="connection-status" id="connectionStatus" role="status" aria-live="polite">Connecting…</p>
+
+  <div class="join-row" id="joinRow">
+    <form id="join-form">
+      <label for="nameInput">Your name</label>
+      <input type="text" id="nameInput" placeholder="Enter your name" autocomplete="name" maxlength="40" disabled>
+      <button type="submit" disabled>Join chat</button>
+    </form>
+  </div>
+
+  <div class="input-row">
+    <form action="#" id="send-container">
+        <input type="text" id="msgInput" placeholder="Type a message..." autocomplete="off" maxlength="1000" disabled>
+        <button type="submit" disabled>Send</button>
+    </form>
+  </div>
+</div>
+    
+</body>
+</html>
