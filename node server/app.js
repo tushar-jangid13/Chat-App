@@ -25,7 +25,6 @@ function createChatServer() {
             socket.broadcast.emit("user-joined", userName);
             reply({ ok: true, name: userName });
         });
-
         socket.on("send", (message, acknowledge) => {
             const reply = typeof acknowledge === "function" ? acknowledge : () => {};
             const userName = users.get(socket.id);
@@ -37,7 +36,6 @@ function createChatServer() {
             socket.broadcast.emit("receive", { message: safeMessage, name: userName });
             reply({ ok: true });
         });
-
         socket.on("disconnect", () => {
             const userName = users.get(socket.id);
             if (userName) socket.broadcast.emit("left", userName);
