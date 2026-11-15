@@ -1,0 +1,15 @@
+{
+  "name": "@tchat/database",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./db": "./db.js",
+    "./models/*": "./models/*.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "mongoose": "^8.24.7"
+  }
+}

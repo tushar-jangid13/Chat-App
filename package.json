@@ -1,0 +1,15 @@
+{
+  "name": "tchat-app",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "database"
+  ],
+  "scripts": {
+    "dev:frontend": "npm run dev --workspace frontend",
+    "dev:backend": "npm run dev --workspace backend",
+    "start:backend": "npm run start --workspace backend"
+  }
+}
